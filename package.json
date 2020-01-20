@@ -1,0 +1,21 @@
+{
+  "name": "pagehit-file",
+  "version": "1.0.0",
+  "description": "Page hit counter which saves data in memory.",
+  "main": "index.js",
+  "scripts": {
+    "debug": "nodemon --trace-warnings ./index.js",
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craigbuckler/pagehit-file.git"
+  },
+  "author": "Craig Buckler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/craigbuckler/pagehit-file/issues"
+  },
+  "homepage": "https://github.com/craigbuckler/pagehit-file#readme"
+}

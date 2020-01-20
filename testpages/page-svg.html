@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>test page hit counter</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+body {
+  font-family: sans-serif;
+}
+
+img.pagecounter {
+  vertical-align: bottom;
+}
+
+pre {
+  padding: 2px 4px;
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+<h1>Page hit counter (SVG)</h1>
+
+<p>This page has been viewed <img class="pagecounter" src="http://localhost:3000/counter.svg" /> times.</p>
+
+<p>The number above is contained in a generated SVG image:</p>
+
+<pre><code>&lt;img src=&quot;http://localhost:3000/counter.svg&quot; alt=&quot;counter&quot; /&gt;</code></pre>
+
+<p>Only one counter should be included in the page.</p>
+
+</body>
+</html>

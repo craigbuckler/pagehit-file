@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>test page hit counter</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+body {
+  font-family: sans-serif;
+}
+
+pre {
+  padding: 2px 4px;
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+<h1>Page hit counter (Ajax)</h1>
+
+<p>This page has been viewed <span class="pagecounter"></span> times.</p>
+
+<p>The counter above is fetched using an Ajax call then added to all empty elements with the class <code>pagecounter</code> (any number can be defined).</p>
+
+<p>View the page source for an example script fetches data from <code>http://localhost:3000/counter.json</code>.</p>
+
+<script>
+(async () => {
+
+  try {
+
+    let
+      response = await fetch('http://localhost:3000/counter.json'),
+      json = await response.json(),
+      pc = document.querySelectorAll('.pagecounter');
+
+    for (let i = 0; i < pc.length; i++) {
+      if (!pc[i].textContent) pc[i].textContent = json.counter;
+    }
+
+  }
+  catch(err) {
+    console.log('fetch error', err);
+  }
+
+})();
+</script>
+</body>
+</html>
